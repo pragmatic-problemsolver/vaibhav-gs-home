@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vaibhav GS - MTS-1 at PayPal | High-Performance Systems Architect | Toastmasters Leader">
+    <meta name="keywords" content="Java, SpringBoot, Kafka, Microservices, Performance Tuning, Observability, Toastmasters">
+    <meta name="author" content="Vaibhav GS">
+    <title>Vaibhav GS - Systems Architect & Tech Leader</title>
+    <style>
+        * {
+            margin:  0;
+            padding: 0;
+            box-sizing:  border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background:  linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding:  20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow:  0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-size: 3em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .header-content . tagline {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .header-content .subtitle {
+            font-size: 1.1em;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .social-links a:hover {
+            background: #764ba2;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        . card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow:  0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            color: #667eea;
+            margin-bottom:  20px;
+            font-size:  1.8em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        . card ul, .card ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .card li {
+            margin-bottom: 8px;
+            line-height: 1.8;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        . about-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .about-item strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        . tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 15px;
+            border-radius:  5px;
+            font-size: 0.9em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .expertise-section {
+            margin-bottom: 25px;
+        }
+
+        . expertise-section h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        . expertise-section ul {
+            margin-left: 20px;
+        }
+
+        .expertise-section li {
+            margin-bottom:  8px;
+        }
+
+        .featured-project {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius:  10px;
+            margin-bottom: 20px;
+        }
+
+        .featured-project h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        . featured-project a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .featured-project a:hover {
+            text-decoration: underline;
+        }
+
+        .philosophy {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color:  white;
+            padding: 30px;
+            border-radius:  10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-style: italic;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        . back-to-top {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .back-to-top:hover {
+            background: #764ba2;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header-content h1 {
+                font-size: 2em;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+
+        . emoji {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1>👋 Vaibhav GS</h1>
+                <p class="tagline">Member of Technical Staff @ PayPal</p>
+                <p class="subtitle">High-Performance Systems Architect | Observability Advocate | Toastmasters Leader</p>
+                <p class="subtitle">12+ Years of Enterprise-Scale Retail Domain Expertise</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/vaibhav-gs-10b63735/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/pragmatic-problemsolver" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- About Me -->
+            <div class="card">
+                <h2><span class="emoji">🚀</span>About Me</h2>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <strong>💼 Role</strong>
+                        MTS-1 at PayPal
+                    </div>
+                    <div class="about-item">
+                        <strong>⚡ Specialty</strong>
+                        Performance Optimization
+                    </div>
+                    <div class="about-item">
+                        <strong>🏗️ Focus</strong>
+                        Scale Architecture
+                    </div>
+                    <div class="about-item">
+                        <strong>🔍 Passion</strong>
+                        Observability First
+                    </div>
+                    <div class="about-item">
+                        <strong>🤖 Interest</strong>
+                        AI/ML Automation
+                    </div>
+                    <div class="about-item">
+                        <strong>🎤 Leadership</strong>
+                        Toastmasters Leader
+                    </div>
+                </div>
+                <p><strong>Who I Am:</strong></p>
+                <ul>
+                    <li>Member of Technical Staff @ PayPal with 12+ years in Retail domain</li>
+                    <li>Performance obsessive - JVM tuning, GC optimization, latency elimination</li>
+                    <li>Observability advocate - Building visibility into every system</li>
+                    <li>Scale architect - Handling millions of transactions with millisecond precision</li>
+                    <li>Business translator - Converting complex requirements into scalable architectures</li>
+                    <li>Toastmasters president & VP of Education - Leadership & communication expert</li>
+                </ul>
+            </div>
+
+            <!-- Core Passions -->
+            <div class="card">
+                <h2><span class="emoji">💡</span>Core Passions</h2>
+                <ul>
+                    <li><strong>Building Systems at Scale</strong> - Architecting distributed systems that sing</li>
+                    <li><strong>Performance Tuning</strong> - Obsessing over every millisecond</li>
+                    <li><strong>Observability First</strong> - Measuring everything, understanding everything</li>
+                    <li><strong>JVM Mastery</strong> - Extracting maximum performance</li>
+                    <li><strong>Latency Elimination</strong> - Every microsecond counts</li>
+                    <li><strong>Automation</strong> - Eliminating mundane tasks</li>
+                    <li><strong>Business Translation</strong> - Requirements to architecture</li>
+                    <li><strong>Enterprise Architecture</strong> - Scaling from 1K to 1B transactions</li>
+                    <li><strong>Leadership & Communication</strong> - Empowering through clear vision</li>
+                </ul>
+            </div>
+
+            <!-- Technical Arsenal -->
+            <div class="card full-width">
+                <h2><span class="emoji">🛠️</span>Technical Arsenal</h2>
+                
+                <h3>Core Technologies</h3>
+                <div class="tech-grid">
+                    <div class="tech-tag">Java (Optimized)</div>
+                    <div class="tech-tag">SpringBoot</div>
+                    <div class="tech-tag">Python</div>
+                    <div class="tech-tag">REST APIs</div>
+                    <div class="tech-tag">SQL</div>
+                    <div class="tech-tag">NoSQL</div>
+                </div>
+
+                <h3>Performance & Profiling</h3>
+                <div class="tech-grid">
+                    <div class="tech-tag">JProfiler</div>
+                    <div class="tech-tag">YourKit</div>
+                    <div class="tech-tag">Async Profiler</div>
+                    <div class="tech-tag">JMH</div>
+                    <div class="tech-tag">GC Tuning</div>
+                    <div class="tech-tag">JVM Internals</div>
+                </div>
+
+                <h3>Messaging & Streaming</h3>
+                <div class="tech-grid">
+                    <div class="tech-tag">Apache Kafka</div>
+                    <div class="tech-tag">ActiveMQ</div>
+                    <div class="tech-tag">RabbitMQ</div>
+                    <div class="tech-tag">AMQP</div>
+                    <div class="tech-tag">Real-time Streams</div>
+                    <div class="tech-tag">Event-Driven</div>
+                </div>
+
+                <h3>Observability & Monitoring</h3>
+                <div class="tech-grid">
+                    <div class="tech-tag">Datadog</div>
+                    <div class="tech-tag">Splunk</div>
+                    <div class="tech-tag">Kibana</div>
+                    <div class="tech-tag">Grafana</div>
+                    <div class="tech-tag">Distributed Tracing</div>
+                    <div class="tech-tag">APM</div>
+                </div>
+
+                <h3>Cloud Platforms</h3>
+                <div class="tech-grid">
+                    <div class="tech-tag">AWS</div>
+                    <div class="tech-tag">GCP</div>
+                    <div class="tech-tag">Azure</div>
+                    <div class="tech-tag">Kubernetes</div>
+                    <div class="tech-tag">Docker</div>
+                    <div class="tech-tag">Multi-cloud</div>
+                </div>
+
+                <h3>AI/ML & Automation</h3>
+                <div class="tech-grid">
+                    <div class="tech-tag">LLMs</div>
+                    <div class="tech-tag">RAG</div>
+                    <div class="tech-tag">Pinecone</div>
+                    <div class="tech-tag">Milvus</div>
+                    <div class="tech-tag">FAISS</div>
+                    <div class="tech-tag">n8n</div>
+                </div>
+            </div>
+
+            <!-- Featured Project -->
+            <div class="card full-width">
+                <h2><span class="emoji">🌟</span>Featured Projects</h2>
+                <div class="featured-project">
+                    <h3>🤖 dAItician - Health Coach</h3>
+                    <p>A personal sidekick project that leverages AI as an intelligent dietician to help individuals achieve their fitness goals.  Combining LLMs, RAG, and personalized coaching workflows to create a smart fitness companion.</p>
+                    <p><strong>Focus:</strong> AI-powered personalized health coaching, fitness journey optimization, intelligent dietary recommendations</p>
+                    <p><strong>Tech Stack:</strong> Python, LLMs, RAG, Vector DBs (Pinecone, Milvus), FAISS, n8n, semantic understanding</p>
+                    <p><a href="https://github.com/pragmatic-problemsolver/DAIticianHealthCoach" target="_blank">View Repository →</a></p>
+                </div>
+                <p><em>More projects coming soon - Exploring the edges of performance, scale, and intelligent systems. </em></p>
+            </div>
+
+            <!-- Core Expertise -->
+            <div class="card full-width">
+                <h2><span class="emoji">💪</span>Core Expertise</h2>
+                
+                <div class="expertise-section">
+                    <h4>⚡ Performance & Scale</h4>
+                    <ul>
+                        <li>Building systems handling millions of transactions with minimal latency</li>
+                        <li>JVM tuning, garbage collection optimization, throughput maximization</li>
+                        <li>Database query optimization, indexing strategies, caching patterns</li>
+                        <li>Distributed tracing and observability at scale</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-section">
+                    <h4>🔍 Observability & Monitoring</h4>
+                    <ul>
+                        <li>Designing comprehensive observability strategies from architecture phase</li>
+                        <li><strong>Datadog: </strong> APM instrumentation, custom metrics, log correlation, dashboard design</li>
+                        <li><strong>Splunk:</strong> Advanced log aggregation, troubleshooting workflows, security analytics</li>
+                        <li><strong>Kibana:</strong> Log exploration, pattern detection, custom visualizations</li>
+                        <li><strong>Grafana:</strong> Multi-source dashboards, time-series analysis, intelligent alerting</li>
+                        <li>Building dashboards that tell the story of system health</li>
+                        <li>Creating actionable alerts and SLO monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-section">
+                    <h4>🏗️ Architecture & Design</h4>
+                    <ul>
+                        <li>Microservices at enterprise scale</li>
+                        <li>Event-driven architecture patterns</li>
+                        <li>SAGA patterns for distributed transactions</li>
+                        <li>High-availability systems and failover strategies</li>
+                        <li>Designing for observability (instrumentation-first approach)</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-section">
+                    <h4>🛒 Retail Domain Mastery</h4>
+                    <ul>
+                        <li>E-commerce platforms operating at scale</li>
+                        <li>Payment processing systems with strict SLAs</li>
+                        <li>Inventory management across distributed systems</li>
+                        <li>Customer journey optimization</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-section">
+                    <h4>🤖 Intelligent Automation</h4>
+                    <ul>
+                        <li>LLM integration and workflow orchestration</li>
+                        <li>Semantic search with vector databases</li>
+                        <li>RAG pipeline development for knowledge automation</li>
+                        <li>AI coaching and personalization systems</li>
+                        <li>Business process automation with n8n</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-section">
+                    <h4>🎤 Leadership & Communication</h4>
+                    <ul>
+                        <li>Active Toastmasters International member</li>
+                        <li><strong>President:</strong> Led club operations, strategic planning, and member engagement</li>
+                        <li><strong>VP of Education:</strong> Directed educational programs, mentored speakers, advanced member development</li>
+                        <li>Public speaking and presentation excellence</li>
+                        <li>Team leadership and mentoring</li>
+                        <li>Cross-functional collaboration</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Current Focus -->
+            <div class="card full-width">
+                <h2><span class="emoji">🎯</span>Current Focus</h2>
+                <ul>
+                    <li>🔭 Building next-gen payment systems at PayPal with obsessive attention to latency</li>
+                    <li>⚡ JVM performance optimization - exploring GC algorithms, heap management</li>
+                    <li>🔍 Enterprise observability - designing comprehensive monitoring strategies</li>
+                    <li>🌱 Advanced Kafka patterns - high-throughput, low-latency message processing</li>
+                    <li>🤖 AI-powered workflow automation - eliminating manual tasks at scale</li>
+                    <li>🗺️ Enterprise roadmap creation - translating business vision into technical milestones</li>
+                    <li>🎤 Mentoring & Leadership - helping engineers and professionals grow</li>
+                </ul>
+            </div>
+
+            <!-- Ask Me About -->
+            <div class="card full-width">
+                <h2><span class="emoji">💬</span>Ask Me About</h2>
+                <div class="tech-grid" style="margin-bottom: 0;">
+                    <div class="tech-tag">Performance Tuning</div>
+                    <div class="tech-tag">JVM Internals</div>
+                    <div class="tech-tag">Observability</div>
+                    <div class="tech-tag">Kafka Patterns</div>
+                    <div class="tech-tag">Microservices</div>
+                    <div class="tech-tag">Enterprise Architecture</div>
+                    <div class="tech-tag">Business Translation</div>
+                    <div class="tech-tag">Retail Domain</div>
+                    <div class="tech-tag">LLMs & RAG</div>
+                    <div class="tech-tag">Leadership</div>
+                    <div class="tech-tag">Public Speaking</div>
+                    <div class="tech-tag">Mentoring</div>
+                </div>
+            </div>
+
+            <!-- Philosophy -->
+            <div class="philosophy full-width">
+                <p>💭 "Great systems aren't just built—they're optimized AND observed. Every millisecond matters.  Every transaction counts. Every system deserves comprehensive visibility.  You can't improve what you can't measure.  And great leaders empower others through clear communication and vision."</p>
+            </div>
+
+            <!-- Get In Touch -->
+            <div class="card full-width">
+                <h2><span class="emoji">📫</span>Get In Touch</h2>
+                <p><strong>I'm always energized by conversations about: </strong></p>
+                <ul>
+                    <li>⚡ Performance challenges - the harder the optimization problem, the better</li>
+                    <li>🔍 Observability & Monitoring - designing systems you can understand and debug</li>
+                    <li>🏗️ Scaling systems - from proof-of-concept to millions of users</li>
+                    <li>🤖 Automation opportunities - eliminating the repetitive</li>
+                    <li>🗺️ Technical roadmaps - strategy meets execution</li>
+                    <li>📚 Knowledge sharing - teaching others to build fast, scalable, observable systems</li>
+                    <li>🎤 Speaking engagements - discussing performance, scale, and pragmatic architecture</li>
+                    <li>🌟 Mentoring - helping engineers grow technically and professionally</li>
+                    <li>💬 Toastmasters & Communication - sharing experiences in public speaking</li>
+                </ul>
+                <p style="margin-top: 20px;"><strong>Connect with me:</strong></p>
+                <p>
+                    <a href="https://www.linkedin.com/in/vaibhav-gs-10b63735/" target="_blank" style="display: inline-block; padding: 10px 20px; background:  #0077b5; color: white; text-decoration: none; border-radius: 5px; margin-right: 10px;">LinkedIn Profile</a>
+                    <a href="https://github.com/pragmatic-problemsolver" target="_blank" style="display: inline-block; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px;">GitHub Profile</a>
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p><strong>Last Updated:</strong> January 15, 2026</p>
+            <p>⭐ If you find my projects helpful, consider giving them a star on GitHub! </p>
+            <p style="margin-top: 15px; color: #999;">Built with ❤️ by Vaibhav GS</p>
+            <a href="#" class="back-to-top">Back to Top</a>
+        </footer>
+    </div>
+</body>
+</html>
