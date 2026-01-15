@@ -70,18 +70,12 @@ Beyond code, I'm a **Toastmasters leader and public speaker** — I've served as
 - CI/CD pipelines (performance as a first-class metric)
 - Git, infrastructure as code
 
-## 📊 GitHub Stats
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=pragmatic-problemsolver&show_icons=true&theme=radical)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?  username=pragmatic-problemsolver&layout=compact&theme=radical)
-
 ## 🌟 Featured Projects
 
 ### 🤖 dAItician - Health Coach
-A personal sidekick project that leverages AI as an intelligent dietician to help individuals achieve their fitness goals.  Combining LLMs, RAG, and personalized coaching workflows to create a smart fitness companion.  
+A personal sidekick project that leverages AI as an intelligent dietician to help individuals achieve their fitness goals.  Combining LLMs, and personalized coaching workflows to create a smart fitness companion.  
 - **Focus:** AI-powered personalized health coaching, fitness journey optimization, intelligent dietary recommendations
-- **Tech Stack:** Python, LLMs, RAG, Vector DBs (Pinecone, Milvus), FAISS, n8n, semantic understanding
+- **Tech Stack:** Python, LLMs, Vector DBs (Pinecone), FAISS, n8n, semantic understanding
 - **Link:** [View Repository](https://github.com/pragmatic-problemsolver/DAIticianHealthCoach)
 
 *More projects coming soon - Exploring the edges of performance, scale, and intelligent systems.*
